@@ -1,50 +1,116 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Dynamic and Analytics Dashboard
 
-Currently, two official plugins are available:
+## Objective:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Build a Dynamic Dashboard Application using React.js, Redux, TypeScript, and API integration with Redux Thunk. The application should consist of two main sections: **User Management Dashboard** and **Analytics Dashboard**.
 
-## Expanding the ESLint configuration
+----------
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack:
 
-- Configure the top-level `parserOptions` property like this:
+-   **Frontend**: React.js, TypeScript
+-   **State Management**: Redux, Redux Thunk
+-   **API Handling**: Mock API with Redux Thunk for data fetching
+-   **Charting**: Chart.js, Recharts, or any other charting library
+-   **Responsive Design**: Fully responsive and mobile-friendly layout
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+----------
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Task Requirements:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 1. **User Management Dashboard**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+#### Features:
+
+-   **Login Page**:
+    
+    -   Implement a mock API to authenticate users.
+-   **Dashboard**:
+    
+    -   Fetch and display a list of users in a table format.
+    -   Each user should have action buttons: _View Details_ and _Delete_.
+-   **Search and Filter**:
+    
+    -   Implement search and filter functionality for users by their name or email.
+-   **Pagination**:
+    
+    -   Display the list of users with pagination (show 5 users per page).
+
+----------
+
+### 2. **Analytics Dashboard**
+
+#### Features:
+
+-   **Overview Cards**:
+    
+    -   Display key summary metrics such as:
+        -   **Total Users**: Count of all fetched users.
+        -   **Active Users**: A mock calculation based on a field like `status`.
+        -   **Deleted Users**: Track the count of deleted users during the session.
+-   **Charts Section**:
+    
+    -   Display the following visualizations:
+        -   **User Registration Trend**: A line chart showing user registrations over the past 6 months (mock data).
+        -   **Active vs Inactive Users**: A pie chart comparing active and inactive users.
+        -   **Users by Region**: A bar chart or map displaying user distribution by regions (mock region data).
+-   **Filters for Analytics**:
+    
+    -   Implement filters for analytics based on:
+        -   **Date Range**.
+        -   **Region**.
+
+----------
+
+### 3. **Responsive Design**
+
+Ensure that the analytics dashboard is fully responsive and mobile-friendly. The layout should adapt to various screen sizes and orientations.
+
+
+
+## Installation
+
+### Prerequisites:
+
+-   Node.js (v14 or later)
+-   npm or yarn
+
+### Steps:
+
+1.  **Clone the repository**:
+    
+    `git clone <repository-url>
+    cd <project-folder>` 
+    
+2.  **Install dependencies**:
+    
+   
+    
+    `npm install` 
+    
+    or
+   
+    
+    `yarn install` 
+    
+3.  **Run the application**:
+    
+   
+    
+    `npm start` 
+    
+    or
+    
+ 
+    
+    `yarn start` 
+    
+    The app will be available at `http://localhost:3000`.
+    
+
+----------
+
+## Conclusion
+
+This Dynamic and Analytics Dashboard provides a user-friendly and efficient interface for managing users and displaying analytics data. The app is built with React.js, Redux, TypeScript, and mock API integration, making it scalable and easily maintainable.`enter code here`

@@ -1,15 +1,15 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import usersData from "../../mock/users";
 
-// Define the structure of a user
+
 interface User {
   id: number;
   name: string;
   email: string;
-  // Add other user fields as required
+  
 }
 
-// Define the initial state structure
+
 interface AuthenticationState {
   isAuthenticated: boolean;
   currentUser: User | null;
